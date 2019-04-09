@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Liquidos</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Nombre</th>
+      <th>Precio</th>
+      <th>Detalle</th>
+      <th>Categoria</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @liquidos.each do |liquido| %>
+      <tr>
+        <td><%= liquido.nombre %></td>
+        <td><%= liquido.precio %></td>
+        <td><%= liquido.detalle %></td>
+        <td><%= liquido.categoria %></td>
+        <td><%= link_to 'Show', liquido %></td>
+        <td><%= link_to 'Edit', edit_liquido_path(liquido) %></td>
+        <td><%= link_to 'Destroy', liquido, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Liquido', new_liquido_path %>

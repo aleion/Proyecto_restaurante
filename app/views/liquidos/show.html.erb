@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Nombre:</strong>
+  <%= @liquido.nombre %>
+</p>
+
+<p>
+  <strong>Precio:</strong>
+  <%= @liquido.precio %>
+</p>
+
+<p>
+  <strong>Detalle:</strong>
+  <%= @liquido.detalle %>
+</p>
+
+<p>
+  <strong>Categoria:</strong>
+  <%= @liquido.categoria %>
+</p>
+
+<%= link_to 'Edit', edit_liquido_path(@liquido) %> |
+<%= link_to 'Back', liquidos_path %>
